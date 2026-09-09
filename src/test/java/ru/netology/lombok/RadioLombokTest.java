@@ -1,4 +1,4 @@
-package ru.netology.stats;
+package ru.netology.lombok;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,8 +6,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
-public class RadioTest {
-    Radio cond = new Radio();
+public class RadioLombokTest {
+    RadioLombok cond = new RadioLombok();
 
     @Order(1)       //==== Выставляем текущую радиостанцию =====
     @ParameterizedTest
@@ -29,7 +29,7 @@ public class RadioTest {
     })
     public void WeSetTheCurrentRadioStationWithTheParameters(int setCurrentRadioStation, int expected) {
 
-        Radio cond = new Radio(10,50);
+        RadioLombok cond = new RadioLombok(10, 50);
         cond.setCurrentRadioStation(setCurrentRadioStation);
         int actual = cond.getCurrentRadioStation();
 

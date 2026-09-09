@@ -1,2 +1,4 @@
 .idea
 target
+src/test/java/ru/netology/stats
+src/main/java/ru/netology/stats
