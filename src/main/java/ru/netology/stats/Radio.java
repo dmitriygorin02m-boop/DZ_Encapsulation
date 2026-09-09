@@ -36,14 +36,14 @@ public class Radio {
         if (newCurrentRadioStation < minRadioStation) {
             return;
         }
-        currentRadioStation = newCurrentRadioStation;
+        this.currentRadioStation = newCurrentRadioStation;
     }
 
     public void setNextRadioStation() {  //Переключение радиостанции +
         if (currentRadioStation < maxRadioStation) {
             currentRadioStation++;
         } else {
-            currentRadioStation = 0;
+            this.currentRadioStation = minRadioStation;
         }
     }
 
@@ -51,7 +51,7 @@ public class Radio {
         if (currentRadioStation > minRadioStation) {
             currentRadioStation--;
         } else {
-            currentRadioStation = maxRadioStation;
+            this.currentRadioStation = maxRadioStation;
         }
     }
 
@@ -80,14 +80,14 @@ public class Radio {
         if (newSoundVolume < minSoundVolume) {
             return;
         }
-        soundVolume = newSoundVolume;
+        this.soundVolume = newSoundVolume;
     }
 
     public void setIncreaseSoundVolume() {  //увеличение громкости
         if (soundVolume < maxSoundVolume) {
             soundVolume++;
         } else {
-            soundVolume = soundVolume;
+            this.soundVolume = soundVolume;
         }
     }
 
@@ -95,7 +95,7 @@ public class Radio {
         if (soundVolume > minSoundVolume) {
             soundVolume--;
         } else {
-            soundVolume = soundVolume;
+            this.soundVolume = soundVolume;
         }
     }
 
