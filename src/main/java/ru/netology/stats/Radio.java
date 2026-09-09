@@ -23,22 +23,19 @@ public class Radio {
 
     public void setNextRadioStation() {  //Переключение радиостанции +
         if (currentRadioStation < maxRadioStation) {
-            currentRadioStation = currentRadioStation + 1;
+            currentRadioStation++;
         } else {
             currentRadioStation = 0;
         }
-
     }
 
     public void setRewRadioStation() {  //Переключение радиостанции -
         if (currentRadioStation > 0) {
-            currentRadioStation = currentRadioStation - 1;
+            currentRadioStation--;
         } else {
             currentRadioStation = maxRadioStation;
-
         }
     }
-
 
     public int soundVolume; // громкость звука
 
@@ -60,16 +57,15 @@ public class Radio {
 
     public void setIncreaseSoundVolume() {  //увеличение громкости
         if (soundVolume < maxSoundVolume) {
-            soundVolume = soundVolume + 1;
+            soundVolume++;
         } else {
             soundVolume = soundVolume;
         }
-
     }
 
     public void setDecreasingVolume() {  //Уменьшение громкости
         if (soundVolume > 0) {
-            soundVolume = soundVolume - 1;
+            soundVolume--;
         } else {
             soundVolume = soundVolume;
         }
