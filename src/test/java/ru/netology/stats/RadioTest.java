@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class RadioTest {
-
+    Radio cond = new Radio();
 
     @Order(1)       //==== Выставляем текущую радиостанцию =====
     @ParameterizedTest
@@ -16,7 +16,6 @@ public class RadioTest {
     })
     public void WeSetTheCurrentRadioStation(int setCurrentRadioStation, int expected) {
 
-        Radio cond = new Radio();
         cond.setCurrentRadioStation(setCurrentRadioStation);
         int actual = cond.getCurrentRadioStation();
 
@@ -45,7 +44,6 @@ public class RadioTest {
     })
     public void SwitchToTheNextRadioStation(int setCurrentRadioStation, int expected) {
 
-        Radio cond = new Radio();
         cond.setCurrentRadioStation(setCurrentRadioStation);
         cond.setNextRadioStation();
         int actual = cond.getCurrentRadioStation();
@@ -60,7 +58,6 @@ public class RadioTest {
     })
     public void SwitchingTheRadioToThePreviousStation(int setCurrentRadioStation, int expected) {
 
-        Radio cond = new Radio();
         cond.setCurrentRadioStation(setCurrentRadioStation);
         cond.setRewRadioStation();
         int actual = cond.getCurrentRadioStation();
@@ -76,7 +73,6 @@ public class RadioTest {
     })
     public void WeAdjustTheSoundVolumeWithTheParameters(int setSoundVolume, int expected) {
 
-        Radio cond = new Radio();
         cond.setSoundVolume(setSoundVolume);
         int actual = cond.getSoundVolume();
 
@@ -91,7 +87,6 @@ public class RadioTest {
     })
     public void IncreaseTheSoundVolume(int setSoundVolume, int expected) {
 
-        Radio cond = new Radio();
         cond.setSoundVolume(setSoundVolume);
         cond.setIncreaseSoundVolume();
         int actual = cond.getSoundVolume();
@@ -106,7 +101,6 @@ public class RadioTest {
     })
     public void DecreaseTheSoundVolume(int setSoundVolume, int expected) {
 
-        Radio cond = new Radio();
         cond.setSoundVolume(setSoundVolume);
         cond.setDecreasingVolume();
         int actual = cond.getSoundVolume();
