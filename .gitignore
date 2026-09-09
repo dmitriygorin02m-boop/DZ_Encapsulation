@@ -1,4 +1,4 @@
 .idea
 target
-Radio.java
-RadioTest.java
+src/test/java/ru/netology/stats
+src/main/java/ru/netology/stats

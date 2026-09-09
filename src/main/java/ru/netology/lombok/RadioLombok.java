@@ -1,4 +1,4 @@
-package ru.netology.stats;
+package ru.netology.lombok;
 
 public class RadioLombok {
     private int maxRadioStation = 9;
